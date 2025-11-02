@@ -42,3 +42,7 @@ That's it! The application is now running locally.
 This application is a static site and is deployed to GitHub Pages.
 
 You can view the live version here: https://Mariamajaks.github.io/habit-tracker/
+
+Render:
+
+https://habit-tracker-oysc.onrender.com
