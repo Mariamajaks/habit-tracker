@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main>
+    <header>
+      <h1>Habit Tracker</h1>
+      <p>Add habits, tick your day, and keep your streaks going</p>
+    </header>
+
+    <section class="tip-box" aria-live="polite">
+      <strong>Tip:</strong> Click a day cell to toggle. Use Tab to focus, then Space or Enter to toggle.
+    </section>
+
+    <section aria-labelledby="add-title">
+      <h2 id="add-title">Add a habit</h2>
+      <form id="habit-form">
+        <label for="habit-name" class="sr-only">Habit name</label>
+        <input 
+          id="habit-name" 
+          name="habitName" 
+          type="text" 
+          required 
+          placeholder="e.g. Drink two litres of water" 
+          autocomplete="off">
+        <button type="submit" class="btn">Add</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="tracker-title">
+      <div class="tracker-header">
+        <h2 id="tracker-title">This week</h2>
+        <div id="week-range"></div>
+      </div>
+      <div class="grid-container">
+        <div class="grid grid-header">
+          <div>Habit</div>
+          <div>D-6</div>
+          <div>D-5</div>
+          <div>D-4</div>
+          <div>D-3</div>
+          <div>D-2</div>
+          <div>Yesterday</div>
+          <div>Today</div>
+          <div>Streak</div>
+          <div>Actions</div>
+        </div>
+        <div id="rows"></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="manage-title">
+      <h2 id="manage-title">Manage data</h2>
+      <div class="manage-buttons">
+        <button id="export-json" class="btn-secondary">Export JSON</button>
+        <label class="btn-secondary">
+          Import JSON
+          <input id="import-json" type="file" accept="application/json" hidden>
+        </label>
+        <button id="reset-all" class="btn-danger">Reset all</button>
+      </div>
+      <p class="local-storage-note">Data is stored locally in your browser using localStorage.</p>
+    </section>
+
+    <footer>
+      Built with HTML, CSS and JavaScript. No server required.
+    </footer>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
